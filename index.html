@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Design Tool</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js"></script>
+</head>
+<body>
+
+  <div id="editor-container">
+    <div id="canvas">
+      <!-- Your canvas content goes here -->
+      
+      <input type="text" name="textAddress" id="txt" />
+    </div>
+    <div id="sidebar">
+      <!-- Sidebar tools and options go here -->
+      <h2>Font Style</h2>
+      <button><label for="txt">Add Text</button></label></button>
+      <br>
+      <br>
+      <div id="fontChanger">
+        <label for="fontSelector"><b>Select Font :</b></label>
+        <select id="fontSelector" onchange="changeFont()">
+            <option value="Arial">Arial</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Georgia">Georgia</option>
+        </select>
+    </div>
+      <br>
+      <div id="color-bar">
+        <b>Change font Color</b>
+        <br>
+        <button class="color-button" onclick="changeColor('red')">Red</button>
+        <button class="color-button" onclick="changeColor('blue')">Blue</button>
+        <button class="color-button" onclick="changeColor('green')">Green</button>
+    </div>
+    <br>
+      <div class="container">
+       <div class ="buttons">
+        <span class="btn active" onclick="document.getElementById('txt').style.fontSize = '1em'">A-</span>
+        <span class="btn" onclick="document.getElementById('txt').style.fontSize = '2em'">A+</span>
+       </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
